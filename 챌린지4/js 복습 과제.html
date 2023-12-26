@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 복습 과제</title>
+    <style>
+        .black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS 복습 과제</h1>
+    <button onclick="black()" id="button">black</button>
+    <script>
+    function black(){
+    var body = document.body;
+    body.classList.toggle("black")
+    var button = document.getElementById("button")
+    if(button.innerHTML =="black"){
+        button.innerHTML ="white"
+    } else{button.innerHTML ="black"}
+    };
+    </script>
+</body>
+</html>
