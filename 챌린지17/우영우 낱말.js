@@ -25,9 +25,20 @@
 
 function question(str) {
     // 여기에서 코드 작성해주세요!
-    let result;
 
-    return result;
+    const cleanedString = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    let left = 0;
+    let right = cleanedString.length - 1;
+
+    while (left < right) {
+        if (cleanedString[left] !== cleanedString[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
 }
 
 // 여기는 결과값 함수이므로 신경쓰지 않으셔도 됩니다!
